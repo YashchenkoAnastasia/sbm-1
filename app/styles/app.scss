@@ -35,6 +35,11 @@ html, body{
   border-radius: 50%;
 }
 
+.member-avatar{
+  height: 75px;
+  border-radius: 50%;
+}
+
 .wide-img{
   width: 100%;
   @include media-breakpoint-between(sm, md){
