@@ -4,8 +4,126 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row mt-2">
   <div class="col-12">
-    {{outlet}}
+    {{#bs-accordion as |acc|}}
+      {{#acc.item value="1" as |aitem|}}
+        {{#aitem.title}}
+          Первый проект
+        {{/aitem.title}}
+        {{#aitem.body}}
+          <div class="row">
+            <div class="col-12">
+              <h5>Краткая цель</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?</p>
+            </div>
+            <div class="col-12">
+              <h5>Участники</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 mt-2">
+              <h5>Список литературы</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </div>
+          </div>
+        {{/aitem.body}}
+      {{/acc.item}}
+
+      {{#acc.item value="2" as |aitem|}}
+        {{#aitem.title}}
+          Второй проект
+        {{/aitem.title}}
+        {{#aitem.body}}
+          <div class="row">
+            <div class="col-12">
+              <h5>Краткая цель</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?</p>
+            </div>
+            <div class="col-12">
+              <h5>Участники</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 mt-2">
+              <h5>Список литературы</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </div>
+          </div>
+        {{/aitem.body}}
+      {{/acc.item}}
+
+      {{#acc.item value="3" as |aitem|}}
+        {{#aitem.title}}
+          Третий проект
+        {{/aitem.title}}
+        {{#aitem.body}}
+          <div class="row">
+            <div class="col-12">
+              <h5>Краткая цель</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?</p>
+            </div>
+            <div class="col-12">
+              <h5>Участники</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="project-member-avatar" src="/assets/images/logo.png">
+                  <span>Бакаров Амир</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 mt-2">
+              <h5>Список литературы</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </div>
+          </div>
+        {{/aitem.body}}
+      {{/acc.item}}
+
+    {{/bs-accordion}}
   </div>
 </div>
