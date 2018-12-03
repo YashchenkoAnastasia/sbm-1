@@ -25,10 +25,23 @@ module.exports = function(environment) {
     ENV.host = 'localhost:3000';
   }
 
-
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.protocol = 'http';
+    ENV.host = 'localhost:3000';
   }
+
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'root',
+    routeAfterAuthentication: 'root',
+    routeIfAlreadyAuthenticated: 'root',
+  };
+
+  ENV['ember-simple-auth-token'] = {
+    authorizationHeaderName: 'Authorization',
+    authorizationPrefix: ' ',
+    tokenPropertyName: 'token',
+    serverTokenEndpoint: `${ENV.protocol}://${ENV.host}/api/users/authenticate`
+  };
 
   return ENV;
 };
