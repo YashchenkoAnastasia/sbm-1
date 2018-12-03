@@ -1,0 +1,11 @@
+export function initialize(application) {
+  application.inject('component', 'notifications', 'service:notification-messages');
+  application.inject('controller', 'notifications', 'service:notification-messages');
+  application.inject('route', 'notifications', 'service:notification-messages');
+  application.inject('model', 'notifications', 'service:notification-messages');
+}
+
+export default {
+  name: 'inject-notifications',
+  initialize
+};

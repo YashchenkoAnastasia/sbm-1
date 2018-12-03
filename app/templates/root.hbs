@@ -13,6 +13,15 @@
         {{#nav.item}}{{#nav.link-to "root.projects"}}Проекты{{/nav.link-to}}{{/nav.item}}
       {{/navbar.nav}}
     {{/navbar.content}}
+    <div class="navbar-right">
+      {{#if session.isAuthenticated}}
+        <button type="button" class="btn btn-primary" {{action 'invalidateSession'}}>
+          Выйти
+        </button>
+      {{else}}
+        {{#bs-button onClick=(action (mut modal) true)}}Войти{{/bs-button}}
+      {{/if}}
+    </div>
   {{/bs-navbar}}
   <div class="container-fluid">
     {{outlet}}
@@ -23,3 +32,31 @@
     <span class="text-muted">Информация 2018</span>
   </div>
 </footer>
+
+{{#bs-modal-simple
+  open=modal
+  title="Форма входа"
+  closeTitle="Закрыть"
+  submitTitle="Войти"
+  size=size
+  closeButton=false
+  fade=true
+  backdrop=false
+  backdropClose=false
+  onSubmit=(action "authenticate")
+  onHidden=(action (mut modal) false)
+  renderInPlace=true}}
+  {{#if errorMessage}}
+    <div class="form-group">
+      <div class="alert alert-danger">
+        {{errorMessage}}
+      </div>
+    </div>
+  {{/if}}
+  <div class="from-group">
+    {{input type='text' class='form-control' value=login}}
+  </div>
+  <div class="from-group mt-2">
+    {{input type='password' class='form-control' value=password}}
+  </div>
+{{/bs-modal-simple}}

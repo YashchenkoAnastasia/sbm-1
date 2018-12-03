@@ -11,4 +11,29 @@
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
+  <div class="col-12 mt-3">
+    <h2>Публикации</h2>
+    <div class="row">
+      {{#if session.isAuthenticated}}
+        <div class="col-12 mb-2">
+          {{#link-to "root.posts.create" class="btn btn-primary"}}{{fa-icon "plus"}} Добавить пост{{/link-to}}
+        </div>
+      {{/if}}
+      {{#each model as |post|}}
+        <div class="col-12 mb-2">
+          <div class="card p-2">
+            <div class="card-title font-weight-bold">{{post.title}}</div>
+            <div class="card-body p-0">
+              <p>{{post.shortBody}}</p>
+              {{#link-to "root.posts.show" post.id class="btn btn-primary"}}{{fa-icon "eye"}} Читать{{/link-to}}
+              {{#if session.isAuthenticated}}
+                {{#link-to "root.posts.edit" post.id class="btn btn-secondary ml-2"}}{{fa-icon "pencil"}} Редактировать{{/link-to}}
+              {{/if}}
+            </div>
+          </div>
+
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </div>

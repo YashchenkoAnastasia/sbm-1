@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Создание поста</h1>
+    </div>
+  </div>
+  <form class="row" {{action (perform save) on='submit'}}>
+    <div class="col-12">
+      <label for="title">Название поста</label>
+      {{input id='title' type='text' class='form-control' value=model.title}}
+    </div>
+    <div class="col-12 mt-3">
+      <label for="body">Тело поста</label>
+      {{textarea id='body' class='form-control' value=model.body}}
+    </div>
+    <div class="col-12 mt-3">
+      <button class="btn btn-primary" type="submit">{{fa-icon "check"}} Добавить</button>
+    </div>
+  </form>
+</div>
