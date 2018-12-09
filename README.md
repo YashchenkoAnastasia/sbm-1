@@ -1,29 +1,29 @@
-# Amir's blog frontend application
-
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Semantic Brain Map Blog
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your computer. 
 
+* [Docker](https://www.docker.com/) `brew install docker`
+* [docker-compose] `brew install docker-compose `
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
+* [Ember CLI](https://ember-cli.com/) `brew install ember-cli`
+* [Go](https://golang.org/) `brew install golang`
 * [Google Chrome](https://google.com/chrome/) -- Recommended
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd amir-blog-frontend`
+* `cd sbm/frontend
 * `npm install`
 
-## Running / Development
+## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* `cd sbm/frontend`
+* `ember build`
+* `docker build -t amir_frontend .` 
+* `cd ../backend`
+* `docker-compose up --build`
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
+Visit the app at http://127.0.0.1.
