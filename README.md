@@ -1,4 +1,23 @@
-# Semantic Brain Map Blog
+## Semantic Brain Map Blog
+This blog is devoted to Semantic Brain Map project. One can find a description of Semantic Brain Map and related studies. 
+# Content: 
+ - Members
+ - Information about Semantic Brain Map itself and Semantic Atlas
+ - Review on Linking Techniques for NeuroimagingData and Computational Linguistics Models
+ - A dataset of audio-stimulus with linguistic features
+ 
+ ## Semantic Brain Map project
+ 
+ # Members
+ * Amir Bakarov
+ * Artem Stepanov
+ * Anastasia Yashchenko
+ * Anastasia Lopukhina
+ * Anna Medvedeva
+ * Svetlana Malugina
+ * Alexey Artemov 
+ # Idea
+We are trying to develop an interface, providing information about linking text of audio-stimulus (annotated with different linguistic features) with neuroimaging data. 
 
 ## Prerequisites
 
