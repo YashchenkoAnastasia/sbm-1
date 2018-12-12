@@ -33,7 +33,7 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "3000"
+		port = "3000" // TODO change to other port
 	}
 
 	router := gin.Default()
