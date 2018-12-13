@@ -42,11 +42,11 @@ func PostListHandler(c *gin.Context) {
 
 // Get an post
 func PostShowHandler(c *gin.Context) {
+	var flag int
 	id := c.Param("id")
 	if id != "" && bson.IsObjectIdHex(id) {
 		db := c.MustGet("db").(*mgo.Database)
 		post := models.Post{}
-
 		err := db.C(models.CollectionPost).FindId(bson.ObjectIdHex(id)).One(&post)
 		if err != nil {
 			if err.Error() == "not found" {
