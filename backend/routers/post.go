@@ -42,7 +42,6 @@ func PostListHandler(c *gin.Context) {
 
 // Get an post
 func PostShowHandler(c *gin.Context) {
-	var flag int
 	id := c.Param("id")
 	if id != "" && bson.IsObjectIdHex(id) {
 		db := c.MustGet("db").(*mgo.Database)
